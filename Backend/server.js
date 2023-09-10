@@ -56,7 +56,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: `${process.env.Website_URL}`/auth/google/chats
+  callbackURL: `${process.env.Website_URL}/auth/google/chats`
 },
 async function(accessToken, refreshToken, profile, cb) {
   // console.log(profile);
