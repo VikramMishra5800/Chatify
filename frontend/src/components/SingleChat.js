@@ -22,8 +22,7 @@ const defaultOptions = {
   },
 };
 
-//https://web-chat-backend-9vl9.onrender.com
-const ENDPOINT = "http://localhost:3000";
+const ENDPOINT = `${process.env.Website_URL}`;
 var socket, selectedChatCompare;
 
 const SingleChat = ({fetchAgain,setFetchAgain}) => {

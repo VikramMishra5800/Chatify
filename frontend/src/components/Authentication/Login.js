@@ -20,7 +20,7 @@ const Login = () => {
 
     const Gauth = () => {
       window.open(
-      "http://localhost:5000/auth/google","_self"
+      `${process.env.Website_URL}/auth/google`,"_self"
       );
   }
 

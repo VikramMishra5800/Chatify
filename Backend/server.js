@@ -56,7 +56,7 @@ app.use(passport.session());
 passport.use(new GoogleStrategy({
   clientID: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
-  callbackURL: "http://localhost:5000/auth/google/chats"
+  callbackURL: `${process.env.Website_URL}`/auth/google/chats
 },
 async function(accessToken, refreshToken, profile, cb) {
   // console.log(profile);
@@ -91,9 +91,9 @@ app.get('/auth/google',
   passport.authenticate('google', { scope: ['profile','email'] }));
 
 app.get('/auth/google/chats', 
-  passport.authenticate('google',{ failureRedirect: "http://localhost:3000" }),
+  passport.authenticate('google',{ failureRedirect: `${process.env.Website_URL}` }),
   function(req, res) {
-    res.redirect("http://localhost:3000");
+    res.redirect(`${process.env.Website_URL}`);
   });
 
 
@@ -117,7 +117,7 @@ app.get("/auth/logout",(req,res)=>{
       console.log(err);
     }
 
-    res.redirect("http://localhost:3000");
+    res.redirect(`${process.env.Website_URL}`);
   })
 })
 

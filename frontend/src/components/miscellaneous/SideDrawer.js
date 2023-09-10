@@ -47,7 +47,7 @@ const SideDrawer = () => {
       isClosable: true,
       position: "bottom",
     });
-    window.open("http://localhost:5000/auth/logout","_self");
+    window.open(`${process.env.Website_URL}/auth/logout`,"_self");
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure();
