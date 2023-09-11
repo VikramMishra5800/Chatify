@@ -17,7 +17,7 @@ function App() {
 	const getUser = async () => {
 		try {
       console.log("api called");
-			const url = "http://localhost:5000/auth/login/success";
+			const url = `${process.env.REACT_APP_Website_URL}/auth/login/success`;
 			const { data } = await axios.get(url, { withCredentials: true });
 			setUser(data);
       localStorage.setItem("userInfo",JSON.stringify(data));

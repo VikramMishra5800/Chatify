@@ -22,7 +22,7 @@ const Signup = () => {
 
   const Gauth = () => {
       window.open(
-      `${process.env.Website_URL}/auth/google`,"_self"
+        `${process.env.REACT_APP_Website_URL}/auth/google`,"_self"
       );
   }
 

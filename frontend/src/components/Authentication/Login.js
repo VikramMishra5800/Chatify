@@ -19,8 +19,9 @@ const Login = () => {
     const handleClick = () => setShow(!show)
 
     const Gauth = () => {
+      // console.log(process.env.REACT_APP_Website_URL);
       window.open(
-      `${process.env.Website_URL}/auth/google`,"_self"
+      `${process.env.REACT_APP_Website_URL}/auth/google`,"_self"
       );
   }
 

@@ -47,7 +47,7 @@ const SideDrawer = () => {
       isClosable: true,
       position: "bottom",
     });
-    window.open(`${process.env.Website_URL}/auth/logout`,"_self");
+    window.open(`${process.env.REACT_APP_Website_URL}/auth/logout`,"_self");
   }
 
   const { isOpen, onOpen, onClose } = useDisclosure();

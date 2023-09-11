@@ -22,7 +22,7 @@ const defaultOptions = {
   },
 };
 
-const ENDPOINT = `${process.env.Website_URL}`;
+const ENDPOINT = `${process.env.REACT_APP_Website_URL}`;
 var socket, selectedChatCompare;
 
 const SingleChat = ({fetchAgain,setFetchAgain}) => {
